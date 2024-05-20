@@ -1,0 +1,139 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5em;
+}
+
+.btn-layout {
+  width: 40px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list-products { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.list-products__item {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.list-products__item img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.list-products__item h2 {
+  width: 90%;
+  font-size: 1em;
+  font-weight: normal;
+  background-color: white;
+}
+
+.prices {
+  margin: 10px 0;
+}
+
+.prices, .prices p {
+  font-weight: bold;
+  font-size: 1.25rem;
+  background-color: white;
+}
+
+.list-products__item .prices .priceWithoutDiscont {
+  text-decoration: line-through;
+  color: #b0b0b0;
+  font-size: .9rem;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.list-products__btn {
+  padding: 10px 15px;
+  margin-bottom: 2rem;
+  background-color: #007BFF;
+  color: white;
+  border: 1px solid;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.list-products__btn:hover {
+  background-color: #4ba2ff;
+  transition: .5s ease;
+}
+
+.list-products.grid-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.img-variation {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  width: 150px;
+  background-color: white;
+}
+
+.product-variation {
+  max-width: 50px;
+}
+
+.available-quantity {
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1em;
+  }
+
+  .list-products {
+    grid-template-columns: auto;
+    margin-top: 2.5em;
+  }
+
+  .list-products__item {
+    margin-bottom: 5em;
+  }
+
+  .list-products.grid-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 830px) {
+  .list-products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .list-products.grid-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
